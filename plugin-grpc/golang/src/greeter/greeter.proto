@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "io.grpc.examples";
+option objc_class_prefix = "HLW";
+
+package greeter;
+
+service Greeter {
+  rpc Process (GreeterRequest) returns (GreeterReply) {}
+}
+
+message GreeterRequest {
+    string data = 1;
+}
+
+message GreeterReply {
+    string reply = 1;
+}
+
